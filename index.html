@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- TODO Implementar CSS de color -->
+    <!-- MATERIAL WEB DEPENDENCIES -->
+    
+    
+    <link rel="stylesheet" type="text/css" href="styles/topnav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+  
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+
+    <!-- BOOTSTRAP DEPENDENCIES -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>AutomaToK</title>
+</head>
+<body>
+    <div id="root">
+        <div class="entirebody">
+
+            <!-- Container used for the top navigtation bar -->
+            <div class="topnav">
+                <div class="nav_container">
+                    <a class="navlogo">TiendaVet</a>
+                    <button data-e2e="components-header-HamburgerIcon" class="navbutton">
+                        <svg fill="currentColor" data-e2e="components-header-Icon3LinesHorizontal" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                            <path d="M9 13c0-.55.42-1 .94-1h28.12c.52 0 .94.45.94 1v2c0 .55-.42 1-.94 1H9.94c-.52 0-.94-.45-.94-1v-2Zm0 10c0-.55.42-1 .94-1h28.12c.52 0 .94.45.94 1v2c0 .55-.42 1-.94 1H9.94c-.52 0-.94-.45-.94-1v-2Zm.94 9c-.52 0-.94.45-.94 1v2c0 .55.42 1 .94 1h28.12c.52 0 .94-.45.94-1v-2c0-.55-.42-1-.94-1H9.94Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="navbar">
+                    <a class="home" href="#index">Home</a>
+                    <a class="login" href="#login">Login</a>
+                    <a class="register" href="#register">Register</a>
+                    <button style="background-color:#f8f8f8" class="accountbutton" data-e2e="components-UserAvatar-TUXIconButton">
+                        <svg fill="currentColor" data-e2e="components-UserAvatar-IconPersonFill" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                            <path d="M24 4a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 23C13.06 27 7 34.92 7 41.44 7 45 9 45 16 45h16c7 0 9 0 9-3.56C41 34.92 34.94 27 24 27Z">
+                            </path>
+                        </svg>
+                    </button>
+            
+                </nav>
+            </div>
+
+            <!-- Container used for the entire body -->
+            <main class="container">
+                <!-- header contains the first elements of the container -->
+                <div class="header">
+
+                    <!-- first element of header -->
+                    <div class="headerTitleUp">
+                        <div id="miCarrusel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicadores -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#miCarrusel" data-slide-to="0" class="active"></li>
+                                <li data-target="#miCarrusel" data-slide-to="1"></li>
+                                <li data-target="#miCarrusel" data-slide-to="2"></li>
+                            </ol>
+                        
+                            <!-- Slides -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/test1.jpg" alt="Imagen 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/test2.jpg" alt="Imagen 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/test3.jpg" alt="Imagen 3">
+                                </div>
+                            </div>
+                        
+                            <!-- Controles -->
+                            <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                            <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Siguiente</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- second element of header -->
+                    <div class="headerTitleDown">
+                        <span class="DownTitle">
+                            What you can do with AutomaToK? &nbsp;
+                        </span>
+                        <div data-e2e="landing-LandingHeroV2-ProductDisplay" class="css-l3ndid eglkqml7">
+                            <div data-e2e="landing-LandingHeroV2-ProductRows" class="css-v30f6v eglkqml5">
+                                <div data-e2e="landing-LandingHeroV2-Column" class="css-1fttcpj en5749m0">
+
+                                    <!-- first button --> 
+                                    <button selected="" data-e2e="landing-LandingHeroV2-InfoRow" class="css-i0sugq eglkqml6">
+                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                            More efficient posts
+                                        </span>
+                                        <div selected="" data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-16hr8b8 eglkqml3">
+                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
+                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                                    Plan and schedule your posts on TikTok with ease. Our feature allows you to create and manage your content calendar directly.
+                                                </span>
+                                            </div>
+
+                                            <!--
+
+                                                <a href="https://developers.tiktok.com/blog/announcing-tiktok-developers-blog-2023" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1">
+                                                    <span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                                        Learn More
+                                                    </span>
+                                                    <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                                        <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            -->
+                                                
+
+                                    </div>
+                                    </button>
+                                    <!-- second button -->
+                                    <button data-e2e="landing-LandingHeroV2-InfoRow" class="css-1gocyum eglkqml6">
+                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                            Accurate and extense statistics
+                                        </span>
+                                        <div data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-126tiic eglkqml3">
+                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
+                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                                    Get detailed insights about your account. Our feature provides you with a wide range of statistics to help you understand your audience better.
+                                                </span>
+                                            </div>
+
+                                            <!--
+                                            <a href="https://developers.tiktok.com/blog/effortless-sharing-with-direct-post" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1"><span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">Learn More</span>
+                                                <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                                    <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
+
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            -->
+                                        </div>
+                                    </button>
+                                    <!-- third button -->
+                                    <button data-e2e="landing-LandingHeroV2-InfoRow" class="css-1gocyum eglkqml6">
+                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                            Real Time Trend Analysis
+                                        
+                                        </span>
+                                        <div data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-126tiic eglkqml3">
+                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
+                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                                    Stay up to date with the latest trends on TikTok. Our feature provides you with real-time analysis of the most popular content on the platform.
+                                                </span>
+                                            </div>
+
+                                            <!--
+                                            <a href="https://developers.tiktok.com/doc/working-with-organizations" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1">
+                                                <span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
+                                                    Learn More
+                                                </span>
+                                                <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                                    <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
+
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                            -->
+
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div width="5%" data-testid="spacer" data-e2e="src-spacer-StyledSpacerDiv" class="css-xcpktf e13wderq0">
+
+                            </div>
+                            <div data-e2e="landing-LandingHeroV2-ImageContainer" class="css-darter eglkqml4">
+                                <div data-e2e="common-MultiImageAnimationContainer-Container" class="css-c1gsw5 esi51o61">
+                                    <img src="https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/blog-announcement-v2.png" data-e2e="images-TT4DImage-Image" class="esi51o60 css-1lwm1y e1jpdfmt0" loading="https://sf16-website.neutral.ttwstatic.com/obj/tiktok_web_static/developers/static/images/loading-b8751f4724394341c7a0072812171725.gif">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </main>
+
+          
+    </main>
+
+        </div>
+    </div>
+    
+</body>
+
+<footer class="footerlinks">
+    <div class="foot1">
+        AutomatoK <br>
+        
+    </div>
+    <div class="foot1dot1">
+        (This app is not affiliated with TikTok Inc.) <br>
+        (This service/website is still under development)
+        
+    </div>
+
+    <div class="foot2">
+        <a href="PP.html">Privacy Policy</a>
+        
+    </div>
+    
+    <div class="foot3">
+        <a href="ToS.html">Terms of Service</a>
+        
+    </div>
+
+    <div class="foot4">
+        <a>Automatok 2024</a>
+        
+    </div>
+
+
+
+</footer>
+
+
+</html>

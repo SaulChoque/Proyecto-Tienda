@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="module" src="https://unpkg.com/@material/mwc-button?module"></script>
+    <script type="module" src="https://unpkg.com/@material/mwc-textfield?module"></script>
+    <script nomodule src="https://unpkg.com/@material/mwc-button"></script>
+    <script nomodule src="https://unpkg.com/@material/mwc-textfield"></script>
+</head>
+<body>
+    <mwc-textfield label="Texto"></mwc-textfield>
+    <mwc-button raised>Botón</mwc-button>
+</body>
+</html>
