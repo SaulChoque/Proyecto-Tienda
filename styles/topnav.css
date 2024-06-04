@@ -160,11 +160,39 @@ BODY OF THE PAGE
     
 }
 .headerTitleUp{
+    display: flex;
+    height: 520px;
+    width: 100%;
+    background-color: var(--md-light-sys-color-surface);
+    flex-direction: row;
+    justify-content: center;
     border: 0;
+    /*
+    background-image: url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/Backgrounddesktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    white-space: nowrap;
+    opacity: 0;
+    animation: 2s ease 0s 1 normal both running animation-1o5jvb1;
+    */
 }
 
+
+.carousel-item {
+    object-fit: cover; /* Esto hará que la imagen cubra todo el espacio disponible, recortándola si es necesario */
+    /*height: 500px; /* Cambia esto al alto que desees */
+}
+
+.carousel-item img {
+    height: 520px; /* Ocupa todo el ancho del contenedor */
+    
+     /* Esto hará que la imagen cubra todo el espacio disponible, recortándola si es necesario */
+}
+
+
 .headerTitleDown {
-    background-color: var(--bg-dark-bg-primary);
+    background-color: var(--md-light-sys-color-secondary-container);
     display: flex;
     width: 100%;
     height: 100%;
@@ -207,33 +235,6 @@ FIRST SECTION OF THE PAGE
 
 }
 
-.headerTitleUp{
-    display: flex;
-    height: 520px;
-    width: 100%;
-    background-color: var(--md-light-sys-color-surface);
-    padding-left: 10%;
-    -webkit-box-align: center;
-    align-items: center;
-    /*
-    background-image: url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/Backgrounddesktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-    white-space: nowrap;
-    opacity: 0;
-    animation: 2s ease 0s 1 normal both running animation-1o5jvb1;
-    */
-}
-
-.carousel-item {
-    height: 500px; /* Cambia esto al alto que desees */
-}
-
-.carousel-item img {
-    height: 100%;
-    object-fit: cover; /* Esto hará que la imagen cubra todo el espacio disponible, recortándola si es necesario */
-}
 
 
 /* DOWN TITLE HEADER ELEMENTS */

@@ -11,3 +11,8 @@
     <mwc-button raised>Botón</mwc-button>
 </body>
 </html>
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 50%;
+}
