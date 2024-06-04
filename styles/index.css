@@ -248,7 +248,11 @@ FIRST SECTION OF THE PAGE
     font-weight: var(--tux-fontWeightBold);
 }
 
-
+.row{
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 
 

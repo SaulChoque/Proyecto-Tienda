@@ -1,5 +1,11 @@
 
 :root {
+  /*buttons*/
+  --md-filled-button-container-color: var(--md-light-sys-color-primary);
+
+  
+
+
   --md-light-sys-color-primary: rgb(51 105 64);
   --md-light-sys-color-surface-tint: rgb(51 105 64);
   --md-light-sys-color-on-primary: rgb(255 255 255);
