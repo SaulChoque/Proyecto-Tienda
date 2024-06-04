@@ -247,11 +247,7 @@ FIRST SECTION OF THE PAGE
     font-family: var(--tux-fontFamilyHeading);
     font-weight: var(--tux-fontWeightBold);
 }
-.cardContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo de las tarjetas según tus necesidades */
-    grid-gap: 20px; /* Ajusta el espacio entre las tarjetas según tus necesidades */
-}
+
 
 
 
