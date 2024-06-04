@@ -1,0 +1,642 @@
+/*GLOSARIO
+mc = medium contrast
+hc = high contrast
+*/
+
+
+@import url('light.css');
+@import url('light-mc.css');
+@import url('light-hc.css');
+
+@import url('dark.css');
+@import url('dark-mc.css');
+@import url('dark-hc.css');
+
+
+@font-face {
+    font-family: TkTkFont;
+    src: url(fonts/TikTokDisplayFont-Bold.woff2);
+    src: url(fonts/TikTokFont-Bold.woff2);
+    src: url(fonts/TikTokFont-Regular.woff2);
+    src: url(fonts/TikTokFont-Semibold.woff2);
+}
+
+:root {
+    --tux-fontFamilyHeading: 'TikTokDisplayFont',Arial,Tahoma,PingFangSC,sans-serif;
+    --tux-fontFamilyParagraph: 'TikTokFont',Arial,Tahoma,PingFangSC,sans-serif;
+    --tux-fontWeightRegular: 400;
+    --tux-fontWeightSemibold: 500;
+    --tux-fontWeightBold: 700;
+    --tux-fontSizeH1: 96px;
+    --tux-fontSizeH2: 72px;
+    --tux-fontSizeH3: 56px;
+    --tux-fontSizeH4: 48px;
+    --tux-fontSizeH5: 32px;
+    --tux-fontSizeH6: 24px;
+    --tux-fontSizeH7: 18px;
+    --tux-fontSizeP1: 24px;
+    --tux-fontSizeP2: 18px;
+    --tux-fontSizeP3: 16px;
+    --tux-fontSizeP4: 14px;
+    --tux-fontSizeP5: 12px;
+
+    --blue: #1e90ff;
+    --white: #ffffff;
+
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+article {
+    background-color: var(--md-light-sys-color-surface);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+body {
+    margin: 0;
+    background: var(--md-light-sys-color-surface);
+    box-sizing: border-box;
+    color: var(--md-light-sys-color-on-surface);
+    font-family: var(--tux-fontFamilyParagraph);
+    font-size: 1.8rem;
+    letter-spacing: -0.015em;
+    text-align: left;
+    -webkit-tap-highlight-color: transparent;
+    background-color: var(--md-light-sys-color-surface);
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: hidden;
+}
+
+/*MUST*/
+.container a{
+    font-family: 'TkTkFont',TikTokDisplayFont-Bold;
+    color: var(--md-light-sys-color-surface);
+    /*font-size: 310px;*/
+}
+
+/*MUST*/
+.topnav {
+    overflow: hidden;
+    background-color: var(--md-light-sys-color-secondary-container);
+    /*background-color: rgba(0, 0, 0, 1);*/
+    text-align: right;  
+}
+
+.nav_container{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.nav_container a{
+    font-family: 'TkTkFont',TikTokDisplayFont-Bold;
+    color: var(--md-light-sys-color-on-secondary-container);  
+    
+}
+
+
+.navbutton svg {
+    width: 100px;
+}
+svg, img, embed, object {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+.home {
+    display: block;
+    margin: 0 12px;
+    padding: 0;
+    height: 20px;
+    background: none;
+    border-bottom: none;
+    color: #fff;
+    font-family: var(--tux-fontFamilyParagraph);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.login {
+    display: block;
+    margin: 0 12px;
+    padding: 0;
+    height: 20px;
+    background: none;
+    border-bottom: none;
+    color: #fff;
+    font-family: var(--tux-fontFamilyParagraph);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+.register {
+    display: block;
+    margin: 0 12px;
+    padding: 0;
+    height: 20px;
+    background: none;
+    border-bottom: none;
+    color: #fff;
+    font-family: var(--tux-fontFamilyParagraph);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+/*
+BODY OF THE PAGE
+*/
+.container {
+    display: block;
+    max-width: 1360px;
+    border: 2px solid white;
+    
+}
+.headerTitleUp{
+    display: flex;
+    height: 520px;
+    width: 100%;
+    background-color: var(--md-light-sys-color-surface);
+    flex-direction: row;
+    justify-content: center;
+    border: 0;
+    /*
+    background-image: url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/Backgrounddesktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    white-space: nowrap;
+    opacity: 0;
+    animation: 2s ease 0s 1 normal both running animation-1o5jvb1;
+    */
+}
+
+
+.carousel-item {
+    object-fit: cover; /* Esto hará que la imagen cubra todo el espacio disponible, recortándola si es necesario */
+    /*height: 500px; /* Cambia esto al alto que desees */
+}
+
+.carousel-item img {
+    height: 520px; /* Ocupa todo el ancho del contenedor */
+    
+     /* Esto hará que la imagen cubra todo el espacio disponible, recortándola si es necesario */
+}
+
+
+.headerTitleDown {
+    background-color: var(--md-light-sys-color-secondary-container);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    padding-bottom: 120px;
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DownTitle{
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: var(--tux-fontSizeH5);
+    line-height: 1.2;
+    font-family: var(--tux-fontFamilyHeading);
+    font-weight: var(--tux-fontWeightBold);
+}
+/*
+FIRST SECTION OF THE PAGE
+*/
+.header {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: var(--md-light-sys-color-surface);
+    color: var(--md-light-sys-color-on-surface);
+    margin: 0 calc((100% - 100vw) / 2);
+
+}
+
+
+
+/* DOWN TITLE HEADER ELEMENTS */
+.DownTitle {
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: var(--tux-fontSizeH5);
+    line-height: 1.2;
+    font-family: var(--tux-fontFamilyHeading);
+    font-weight: var(--tux-fontWeightBold);
+}
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo de las tarjetas según tus necesidades */
+    grid-gap: 20px; /* Ajusta el espacio entre las tarjetas según tus necesidades */
+}
+
+
+
+
+.css-v30f6v {
+    width: 55%;
+    max-width: 680px;
+}
+
+.css-1fttcpj {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.css-l3ndid {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 48px;
+}
+
+
+.css-i0sugq {
+    all: unset;
+    cursor: pointer;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: var(--bg-selected-row);
+    color: #fff;
+}
+
+.css-darter {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    max-width: 480px;
+}
+
+.css-1gocyum {
+    all: unset;
+    cursor: pointer;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: var(--bg-dark-bg-primary);
+    color: rgb(255 255 255 / 50%);
+}
+/* PAGE MAX (TELEFONO)*/
+@media screen and (max-width: 980px) {    
+    .headerTitleUp{        
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-image: url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/MobileBGTop.png), url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/MobileBGBot.png);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 40%, 40%;
+        background-position: left top, right bottom;
+
+    }
+    
+    .navbutton {
+        display: block;
+        height: 100%;
+        background: none;
+        border: none;
+        padding-top: 4px;
+        color: #fff;
+        align-items: right;
+    }
+    .nav_container{
+        display: flex;
+        cursor: pointer;
+        height: 125px;
+        align-items: center;
+        margin: 3%;
+        justify-content: space-between;
+        
+    }
+
+    
+    .navbar{
+        display: none;
+    }
+    
+
+
+    .nav_container a{
+        font-family: 'TkTkFont',TikTokDisplayFont-Bold;
+        color: rgb(255, 255, 255);  
+        font-size: 53px;
+    
+    }
+    .hdrtext{
+        font-size: var(--tux-fontSizeH2);
+    }
+/*
+.headerTitle{        
+    flex-direction: column;
+    width: 310px;
+    height: 2em;
+    
+}
+*/
+
+    
+}
+/* PAGE MIN ESCRITORIO*/
+@media screen and (min-width: 981px){
+    .container {
+        margin: 0 auto;
+        width: calc(100% - 80px);
+        min-height: calc(100vh -(70px + 368px));
+    }
+    .headerTitleUp {
+        margin: 0;
+        height: 520px;
+    }
+
+    .DownTitle{
+        font-size: var(--tux-fontSizeH6);
+    }
+    
+    /*
+    .container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 25% 40%;
+        background-color: rgba(0, 0, 0, 1);
+        width: 100%;
+        
+        -webkit-box-align: center;
+        
+        
+        background-image: url(https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/Backgrounddesktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right center;
+        white-space: nowrap;
+        
+        animation: 2s ease 0s 1 normal both running animation-1o5jvb1;
+    }
+    
+    */
+    .topnav {
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: 76px;
+        padding: 10px;
+    }
+
+    /*
+    .navbar {
+        
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        overflow-x: auto;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    */
+    
+    .navbar {
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        overflow-x: auto;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .nav_container{
+        display: flex;
+        cursor: pointer;
+        height: auto;
+        align-items: center;
+        /*
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;*/
+        margin: 0;
+        justify-content: space-between;
+        
+    }
+    .nav_container a{
+        font-size: 40px;
+        height: 32px;
+        margin: 22px 20px;
+        -webkit-box-pack: justify;
+        margin: 0;
+    
+    }
+
+    .navbutton{
+        display: none;
+    }
+    
+
+  
+    .headerTitle{
+        font-size: var(--tux-fontSizeH4);
+    }
+
+    .foot1{
+        font-size: var(--tux-fontSizeH6);
+    }
+
+    footer{
+        font-size: medium;
+    }
+}
+
+
+
+
+
+  
+
+
+
+
+button, [role='button'] {
+    cursor: pointer;
+}
+button {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    margin: 0;
+    border: 0;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color: rgb(255, 255, 255);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color:rgb(255, 255, 255);
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+
+
+.accountbutton {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--tux-colorTextPrimary);
+    background-color: var(--tux-colorBGInput);
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+}
+
+button, [role='button'] {
+    cursor: pointer;
+}
+
+footer{
+    padding: 3%;
+    display: grid;
+
+    background-color: rgb(27, 24, 24);
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 70px 70px 30px; 
+    color: rgb(255, 255, 255);    
+    
+}
+
+
+.footerlinks a:visited, .footerlinks a:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);    
+}
+
+.foot1{
+    grid-column: 1/3;
+    font-family: 'TkTkFont',TikTokDisplayFont-Bold;
+    text-decoration: none;
+}
+.foot1dot1{
+    grid-column: 1/3;
+    text-decoration: none;
+}
+
+.foot2{
+    grid-column: 1/2;
+    text-decoration: none;
+}
+
+.foot3{
+    grid-column: 2/3;
+}
+
+.foot4{
+    grid-column: 3/3;
+    font-family: 'TkTkFont',TikTokFont-Semibold;
+    text-decoration: none;
+}
+
+
