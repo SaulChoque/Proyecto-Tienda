@@ -7,6 +7,11 @@
     
     <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--ICONOS MATERIAL IMPORT-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&amp;display=swap">
+    
+    
     <script src="scripts/script.js"></script>
     <script type="importmap">
       {
@@ -17,7 +22,7 @@
     </script>
     <script type="module">
         import '@material/web/all.js';
-      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
   
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
@@ -35,6 +40,10 @@
         <div class="entirebody">
 
             <!-- Container used for the top navigtation bar -->
+
+            <!--
+
+           
             <div class="topnav">
                 <div class="nav_container">
                     <a class="navlogo">TiendaVet</a>
@@ -48,35 +57,113 @@
 
                 <md-outlined-text-field
                     ?disabled=""
-                    label="Search"
-                    placeholder= ""
-                    value="Value"
+                    label="Buscar"
+                 
                     prefix-text=""
                     suffix-text=""
                     supporting-text="">
-                    <md-icon slot="leading-icon">search</md-icon>
+  
                     <md-icon-button
                         aria-label="Clear input"
                         ?disabled=""
                         slot="trailing-icon"
                         @click="">
-                        <md-icon>clear</md-icon>
+                        <md-icon>search</md-icon>
                     </md-icon-button>
                 </md-outlined-text-field>
-                <nav class="navbar">
-                    <a class="home" href="#index">Home</a>
-                    <a class="login" href="#login">Login</a>
-                    <a class="register" href="#register">Register</a>
-                    <button style="background-color:#f8f8f8" class="accountbutton" data-e2e="components-UserAvatar-TUXIconButton">
-                        <svg fill="currentColor" data-e2e="components-UserAvatar-IconPersonFill" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
-                            <path d="M24 4a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 23C13.06 27 7 34.92 7 41.44 7 45 9 45 16 45h16c7 0 9 0 9-3.56C41 34.92 34.94 27 24 27Z">
-                            </path>
-                        </svg>
-                    </button>
-            
-                </nav>
+              
+                    <md-icon-button
+                        aria-label="Clear input"
+                        ?disabled=""
+                        slot="trailing-icon"
+                        @click="">
+                        <md-icon>account_circle</md-icon>
+                    </md-icon-button>
+                    <span style="position: relative">
+                        <md-filled-button id="usage-anchor">Set with idref</md-filled-button>
+                        <md-menu id="usage-menu" anchor="usage-anchor">
+                          <md-menu-item>
+                            <div slot="headline">Apple</div>
+                          </md-menu-item>
+                          <md-menu-item>
+                            <div slot="headline">Banana</div>
+                          </md-menu-item>
+                          <md-menu-item>
+                            <div slot="headline">Cucumber</div>
+                          </md-menu-item>
+                        </md-menu>
+                    </span>
+                    
+                    <script type="module">
+                      // This example uses anchor as an ID reference
+                      const anchorEl = document.body.querySelector('#usage-anchor');
+                      const menuEl = document.body.querySelector('#usage-menu');
+                    
+                      anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+                    </script>
+             
             </div>
+            -->
 
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light position-static">
+                <a class="navbar-brand" href="#">TiendaVet</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <md-outlined-text-field
+                ?disabled=""
+                label="Buscar"
+            
+                prefix-text=""
+                suffix-text=""
+                supporting-text="">
+                    <md-icon-button
+                        aria-label="Clear input"
+                        ?disabled=""
+                        slot="trailing-icon"
+                        @click="">
+                        <md-icon>search</md-icon>
+                    </md-icon-button>
+                </md-outlined-text-field>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <span style="position: relative">
+                            <md-filled-button id="usage-anchor">Iniciar Sesion</md-filled-button>
+                            <md-menu id="usage-menu" anchor="usage-anchor">
+                                <md-menu-item>
+                                    <div slot="headline">Apple</div>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <div slot="headline">Banana</div>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <div slot="headline">Cucumber</div>
+                                </md-menu-item>
+                            </md-menu>
+                        </span>
+                        <script type="module">
+                        // This example uses anchor as an ID reference
+                        const anchorEl = document.body.querySelector('#usage-anchor');
+                        const menuEl = document.body.querySelector('#usage-menu');
+                        
+                        anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+                        </script>
+    
+                    </ul>
+
+
+
+                </div>
+            </nav>
             <!-- Container used for the entire body -->
             <main class="container">
                 <!-- header contains the first elements of the container -->
@@ -123,100 +210,7 @@
                         <span class="DownTitle">
                             Acerca de Nosotros &nbsp;
                         </span>
-                        <div data-e2e="landing-LandingHeroV2-ProductDisplay" class="css-l3ndid eglkqml7">
-                            <div data-e2e="landing-LandingHeroV2-ProductRows" class="css-v30f6v eglkqml5">
-                                <div data-e2e="landing-LandingHeroV2-Column" class="css-1fttcpj en5749m0">
-
-                                    <!-- first button --> 
-                                    <button selected="" data-e2e="landing-LandingHeroV2-InfoRow" class="css-i0sugq eglkqml6">
-                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                            More efficient posts
-                                        </span>
-                                        <div selected="" data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-16hr8b8 eglkqml3">
-                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
-                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                                    Plan and schedule your posts on TikTok with ease. Our feature allows you to create and manage your content calendar directly.
-                                                </span>
-                                            </div>
-
-                                            <!--
-
-                                                <a href="https://developers.tiktok.com/blog/announcing-tiktok-developers-blog-2023" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1">
-                                                    <span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                                        Learn More
-                                                    </span>
-                                                    <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
-                                                        <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
-                                                        </path>
-                                                    </svg>
-                                                </a>
-                                            -->
-                                                
-
-                                    </div>
-                                    </button>
-                                    <!-- second button -->
-                                    <button data-e2e="landing-LandingHeroV2-InfoRow" class="css-1gocyum eglkqml6">
-                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                            Accurate and extense statistics
-                                        </span>
-                                        <div data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-126tiic eglkqml3">
-                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
-                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                                    Get detailed insights about your account. Our feature provides you with a wide range of statistics to help you understand your audience better.
-                                                </span>
-                                            </div>
-
-                                            <!--
-                                            <a href="https://developers.tiktok.com/blog/effortless-sharing-with-direct-post" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1"><span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">Learn More</span>
-                                                <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
-                                                    <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
-
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                            -->
-                                        </div>
-                                    </button>
-                                    <!-- third button -->
-                                    <button data-e2e="landing-LandingHeroV2-InfoRow" class="css-1gocyum eglkqml6">
-                                        <span class="css-1bi8a1 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                            Real Time Trend Analysis
-                                        
-                                        </span>
-                                        <div data-e2e="landing-LandingHeroV2-SubTextContainer" class="css-126tiic eglkqml3">
-                                            <div data-e2e="landing-LandingHeroV2-SubText" class="css-19jzf12 eglkqml2">
-                                                <span class="css-162omej eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                                    Stay up to date with the latest trends on TikTok. Our feature provides you with real-time analysis of the most popular content on the platform.
-                                                </span>
-                                            </div>
-
-                                            <!--
-                                            <a href="https://developers.tiktok.com/doc/working-with-organizations" target="_blank" data-e2e="landing-LandingHeroV2-Link" class="css-c3kccr eglkqml1">
-                                                <span class="css-1lu7at9 eblccp12" data-e2e="landing-LandingHeroV2-TUXText">
-                                                    Learn More
-                                                </span>
-                                                <svg fill="currentColor" data-e2e="landing-LandingHeroV2-TUXIcon" class="flip-rtl css-1bs69du" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
-                                                    <path d="M40.37 24 26.71 10.33a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0l16.21 16.2a1 1 0 0 1 0 1.42L29.96 40.92a1 1 0 0 1-1.41 0l-1.84-1.84a1 1 0 0 1 0-1.42L40.37 24Z">
-
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                            -->
-
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            <div width="5%" data-testid="spacer" data-e2e="src-spacer-StyledSpacerDiv" class="css-xcpktf e13wderq0">
-
-                            </div>
-                            <div data-e2e="landing-LandingHeroV2-ImageContainer" class="css-darter eglkqml4">
-                                <div data-e2e="common-MultiImageAnimationContainer-Container" class="css-c1gsw5 esi51o61">
-                                    <img src="https://sf16-va.tiktokcdn.com/obj/eden-va2/lapz_k4_rvarpa/ljhwZthlaukjlkulzlp/landing_page/blog-announcement-v2.png" data-e2e="images-TT4DImage-Image" class="esi51o60 css-1lwm1y e1jpdfmt0" loading="https://sf16-website.neutral.ttwstatic.com/obj/tiktok_web_static/developers/static/images/loading-b8751f4724394341c7a0072812171725.gif">
-                                </div>
-                            </div>
-                        </div>
+   
 
 
                     </div>

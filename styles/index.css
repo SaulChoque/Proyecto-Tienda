@@ -13,14 +13,6 @@ hc = high contrast
 @import url('dark-hc.css');
 
 
-@font-face {
-    font-family: TkTkFont;
-    src: url(fonts/TikTokDisplayFont-Bold.woff2);
-    src: url(fonts/TikTokFont-Bold.woff2);
-    src: url(fonts/TikTokFont-Regular.woff2);
-    src: url(fonts/TikTokFont-Semibold.woff2);
-}
-
 :root {
     --tux-fontFamilyHeading: 'TikTokDisplayFont',Arial,Tahoma,PingFangSC,sans-serif;
     --tux-fontFamilyParagraph: 'TikTokFont',Arial,Tahoma,PingFangSC,sans-serif;
@@ -67,7 +59,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     background-color: var(--md-light-sys-color-surface);
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-x: hidden;
+
 }
 
 /*MUST*/
@@ -79,13 +71,17 @@ body {
 
 /*MUST*/
 .topnav {
-    overflow: hidden;
+    overflow: visible;
+    align-items: center;
     background-color: var(--md-light-sys-color-secondary-container);
-    /*background-color: rgba(0, 0, 0, 1);*/
-    text-align: right;  
+
 }
 
+.navbar {
+    overflow: visible;
+}
 .nav_container{
+    overflow: visible;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -93,62 +89,6 @@ body {
     
 }
 
-.nav_container a{
-    font-family: 'TkTkFont',TikTokDisplayFont-Bold;
-    color: var(--md-light-sys-color-on-secondary-container);  
-    
-}
-
-
-.navbutton svg {
-    width: 100px;
-}
-svg, img, embed, object {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
-
-.home {
-    display: block;
-    margin: 0 12px;
-    padding: 0;
-    height: 20px;
-    background: none;
-    border-bottom: none;
-    color: #fff;
-    font-family: var(--tux-fontFamilyParagraph);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
-.login {
-    display: block;
-    margin: 0 12px;
-    padding: 0;
-    height: 20px;
-    background: none;
-    border-bottom: none;
-    color: #fff;
-    font-family: var(--tux-fontFamilyParagraph);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
-.register {
-    display: block;
-    margin: 0 12px;
-    padding: 0;
-    height: 20px;
-    background: none;
-    border-bottom: none;
-    color: #fff;
-    font-family: var(--tux-fontFamilyParagraph);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
 
 /*
 BODY OF THE PAGE
@@ -304,7 +244,7 @@ FIRST SECTION OF THE PAGE
 .css-darter {
     width: 30%;
     aspect-ratio: 1 / 1;
-    overflow: hidden;
+
     max-width: 480px;
 }
 
@@ -413,8 +353,6 @@ FIRST SECTION OF THE PAGE
     */
     .topnav {
         display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
@@ -438,22 +376,18 @@ FIRST SECTION OF THE PAGE
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        overflow: hidden;
+
     }
     */
     
     .navbar {
         display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        -webkit-justify-content: flex-end;
+
         justify-content: flex-end;
-        overflow-x: auto;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
+
+
         align-items: center;
-        overflow: hidden;
+
     }
     .nav_container{
         display: flex;
