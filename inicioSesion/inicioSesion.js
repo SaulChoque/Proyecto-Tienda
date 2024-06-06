@@ -1,16 +1,29 @@
 const registerForm = document.getElementById('register-form');
 
 registerForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+  const email = document.getElementById('email').value;
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-    console.log('Correo electrónico:', email);
-    console.log('Nombre de usuario:', username);
-    console.log('Contraseña:', password);
+  const regexEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+\.)([a-zA-Z]{2,})$/;
+  if (!regexEmail.test(email)) {
+    alert('Correo electrónico no válido');
+    return;
+  }
 
-    alert('Registro exitoso!');
-    window.location.href = 'index.html'; // Reemplazar con la URL de la página principal
+  if (username.length < 6) {
+    alert('El nombre de usuario debe tener al menos 6 caracteres');
+    return;
+  }
+
+  const regexPassword = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[_\W]).{8,}/;
+  if (!regexPassword.test(password)) {
+    alert('La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula, un número y un símbolo especial');
+    return;
+  }
+
+  alert('Registro exitoso!');
+  window.location.href = '../index.html'; 
 });
