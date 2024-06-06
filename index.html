@@ -45,6 +45,24 @@
                         </svg>
                     </button>
                 </div>
+
+                <md-outlined-text-field
+                    ?disabled=""
+                    label="Search"
+                    placeholder= ""
+                    value="Value"
+                    prefix-text=""
+                    suffix-text=""
+                    supporting-text="">
+                    <md-icon slot="leading-icon">search</md-icon>
+                    <md-icon-button
+                        aria-label="Clear input"
+                        ?disabled=""
+                        slot="trailing-icon"
+                        @click="">
+                        <md-icon>clear</md-icon>
+                    </md-icon-button>
+                </md-outlined-text-field>
                 <nav class="navbar">
                     <a class="home" href="#index">Home</a>
                     <a class="login" href="#login">Login</a>

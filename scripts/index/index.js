@@ -64,6 +64,8 @@ cardBody.appendChild(link);
 
     col.appendChild(card);
 
+
+//verificar si el mouse entra en la tarjeta   
 col.addEventListener('mouseover', function() {
     console.log('Mouse over');
     // Obtiene el elemento card específico dentro de este col
@@ -79,6 +81,8 @@ col.addEventListener('mouseover', function() {
     }
 });
 
+
+//verificar si el mouse sale de la tarjeta
 col.addEventListener('mouseleave', function() {
     console.log('Mouse leave');
     // Obtiene el elemento card específico dentro de este col
