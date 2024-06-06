@@ -153,6 +153,11 @@
 -->
                         </span>
                         <script type="module">
+                            const usageAnchor = document.getElementById('usage-anchor');
+
+                            usageAnchor.addEventListener('click', () => {
+                            window.location.href = './inicioSesion/inicioSesion.html';
+                        });
                         // This example uses anchor as an ID reference
                         const anchorEl = document.body.querySelector('#usage-anchor');
                         const menuEl = document.body.querySelector('#usage-menu');
