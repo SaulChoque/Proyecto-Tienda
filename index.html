@@ -5,7 +5,7 @@
     <!-- TODO Implementar CSS de color -->
     <!-- MATERIAL WEB DEPENDENCIES -->
     
-    <link rel="stylesheet" href="styles/index/index.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--ICONOS MATERIAL IMPORT-->
@@ -137,9 +137,7 @@
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <span style="position: relative">
-                            <md-filled-button id="usage-anchor"
-                            href="./inicioSesion.html"
-                            >Iniciar Sesion</md-filled-button>
+                            <md-filled-button id="usage-anchor">Iniciar Sesion</md-filled-button>
 <!--
                             <md-menu id="usage-menu" anchor="usage-anchor">
                                 <md-menu-item>
@@ -154,21 +152,18 @@
                             </md-menu>
 -->
                         </span>
-                        <!--
-
-                            <script type="module">
-                                const usageAnchor = document.getElementById('usage-anchor');
+                        <script type="module">
+                            const usageAnchor = document.getElementById('usage-anchor');
 
                             usageAnchor.addEventListener('click', () => {
-                                window.location.href = './inicioSesion/inicioSesion.html';
+                            window.location.href = './inicioSesion/inicioSesion.html';
                         });
                         // This example uses anchor as an ID reference
                         const anchorEl = document.body.querySelector('#usage-anchor');
                         const menuEl = document.body.querySelector('#usage-menu');
                         
                         anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
-                    </script>
-                -->
+                        </script>
     
                     </ul>
 
