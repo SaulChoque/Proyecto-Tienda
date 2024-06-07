@@ -4,13 +4,13 @@ hc = high contrast
 */
 
 
-@import url('light.css');
-@import url('light-mc.css');
-@import url('light-hc.css');
+@import url('../colors/light.css');
+@import url('../colors/light-mc.css');
+@import url('../colors/light-hc.css');
 
-@import url('dark.css');
-@import url('dark-mc.css');
-@import url('dark-hc.css');
+@import url('../colors/dark.css');
+@import url('../colors/dark-mc.css');
+@import url('../colors/dark-hc.css');
 
 
 :root {
