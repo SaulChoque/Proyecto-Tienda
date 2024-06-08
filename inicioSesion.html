@@ -39,98 +39,46 @@
     <body>
         <div class="container">
             <h1>Iniciar Sesion</h1>
-            <form id="register-form">
-                <label for="email">Correo electrónico:</label>
 
-                <md-filled-text-field 
-                id="email" 
-                label="Correo electrónico" 
-                type="email"
-                required
-                @change=${reportValidityEmail}>
-                </md-filled-text-field>
 
-                <!--
-                <input type="email" id="email" name="email" required>
-                -->
-                <br><br>
-                <label for="username">Nombre de usuario:</label>
 
-                <!--
-                <md-filled-text-field  label="Nombre de usuario" >
-                
-                </md-filled-text-field>
-                -->
-                <md-filled-text-field
-                id="username"
-                type="text"
-           
-                label="Nombre de usuario"
-                
-                required
-                supporting-text="* Este campo es obligatorio."
-                @change=${reportValidityUsername}></md-filled-text-field>
-      
-                <!--
-                <input type="text" id="username" name="username" required>
-                -->
-                <br><br>
-                <label for="password">Contraseña:</label>
 
-                <md-filled-text-field 
-                id="password" 
-                label="Contraseña" 
-                type="password"
-                required
-                @change=${reportValidityPassword}>
-                    <md-icon-button 
-                    id = "password-toggle"
-                    type = "button"
-                    toggle slot="trailing-icon">
-                      <md-icon>visibility</md-icon>
-                      <md-icon slot="selected">visibility_off</md-icon>
-                    </md-icon-button>
-                  </md-filled-text-field>
-
-                <!--
-                <input type="password" id="password" name="password" required>
-                -->
-                <br><br>
-                <md-filled-button 
-                id = "submit-button"
-                type="button"
-                class="buttonsubmit"
-                 
-                >
-                    Regístrate
-                </md-filled-button>
-
-                <md-dialog
-  
-                id = "dialog-confirm"
-                style="max-width: 320px;"
-                ?quick=${quick}
-                ?no-focus-trap=${noFocusTrap}>
-                  <div slot="headline">Esta seguro de esta informacion?</div>
-                  <md-icon slot="icon">delete_outline</md-icon>
-                  <form id="form" slot="content" method="dialog">
-                    Deleting the selected photos will also remove them from all synced
-                    devices.
-                  </form>
-                  <div slot="actions">
-                    <md-text-button 
-                    type="submit"
-                    form="form" 
-                    value="Si">
-                    Si
-                  </md-text-button>
-                    <md-filled-tonal-button form="form" value="cancel" autofocus
-                      >Cancelar</md-filled-tonal-button
-                    >
+              <md-dialog 
+              open
+              class="contacts" 
+              ?quick=${quick} 
+              ?no-focus-trap=${noFocusTrap}>
+                <span slot="headline">
+                  <md-icon-button form="form" value="close" aria-label="Close dialog">
+                    <md-icon>close</md-icon>
+                  </md-icon-button>
+                  <span class="headline">Create new contact</span>
+                </span>
+                <form id="form" slot="content" method="dialog" class="contact-content">
+                  <div class="contact-row">
+                    <md-filled-text-field
+                      autofocus
+                      label="First Name"></md-filled-text-field>
+                    <md-filled-text-field label="Last Name"></md-filled-text-field>
                   </div>
-                </md-dialog>
+                  <div class="contact-row">
+                    <md-filled-text-field label="Company"></md-filled-text-field>
+                    <md-filled-text-field label="Job Title"></md-filled-text-field>
+                  </div>
+                  <md-filled-text-field label="Email"></md-filled-text-field>
+                  <md-filled-text-field label="Phone"></md-filled-text-field>
+                </form>
+                <div slot="actions">
+                  <md-text-button form="form" value="reset" type="reset"
+                    >Reset</md-text-button
+                  >
+                  <div style="flex: 1"></div>
+                  <md-text-button form="form" value="cancel">Cancel</md-text-button>
+                  <md-text-button form="form" value="save">Save</md-text-button>
+                </div>
+              </md-dialog>
 
-            </form>
+
         </div>
         <script src="./scripts/inicioSesion/inicioSesion.js"></script>
     </body>

@@ -71,9 +71,17 @@ var dialogConfirm = document.getElementById('dialog-confirm');
 //Buttons
 var toggleButton = document.getElementById('password-toggle');
 var submitButton = document.getElementById('submit-button');
+var cancelButton = document.getElementById('cancel-button');
+
+
+//Events
 
 submitButton.addEventListener('click', async () => {
   await dialogConfirm.show();
+});
+
+cancelButton.addEventListener('click', async () => {
+  await dialogConfirm.close();
 });
 
 

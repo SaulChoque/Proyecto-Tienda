@@ -1,0 +1,12 @@
+  /*buttons*/
+  --md-filled-button-container-color: var(--md-light-sys-color-primary);
+
+  /*TextFields*/
+  --md-text-field-container-color: var(--md-light-sys-color-surface-container-highest);
+  --md-filled-field-container-color: var(--md-light-sys-color-surface-container-high);
+  --md-filled-text-field-focus-active-indicator-color: var(--md-light-sys-color-primary);
+
+  /*Dialogs*/
+  --md-dialog-container-color: var(--md-light-sys-color-surface-container-high);
+  --md-dialog-headline-color: var(--md-light-sys-color-on-surface);
+  --md-dialog-supporting-text-color: var(--md-light-sys-color-on-surface-variant);

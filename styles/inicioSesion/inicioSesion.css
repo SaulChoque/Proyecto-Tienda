@@ -48,3 +48,31 @@ md-filled-text-field[type="email"] {
 button:hover {
     background-color: #45a049;
 }
+
+.contacts {
+    min-width: calc(100vw - 212px);
+  }
+
+  .contacts [slot='header'] {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .contacts .headline {
+    flex: 1;
+  }
+
+  .contact-content,
+  .contact-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-row > * {
+    flex: 1;
+  }

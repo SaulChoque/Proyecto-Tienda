@@ -1,0 +1,97 @@
+
+
+                <label for="email">Correo electrónico:</label>
+
+                <md-filled-text-field 
+                id="email" 
+                label="Correo electrónico" 
+                type="email"
+                required
+                @change=${reportValidityEmail}>
+                </md-filled-text-field>
+
+                <!--
+                <input type="email" id="email" name="email" required>
+                -->
+                <br><br>
+                <label for="username">Nombre de usuario:</label>
+
+                <!--
+                <md-filled-text-field  label="Nombre de usuario" >
+                
+                </md-filled-text-field>
+                -->
+                <md-filled-text-field
+                id="username"
+                type="text"
+           
+                label="Nombre de usuario"
+                
+                required
+                supporting-text="* Este campo es obligatorio."
+                @change=${reportValidityUsername}></md-filled-text-field>
+      
+                <!--
+                <input type="text" id="username" name="username" required>
+                -->
+                <br><br>
+                <label for="password">Contraseña:</label>
+
+                <md-filled-text-field 
+                id="password" 
+                label="Contraseña" 
+                type="password"
+                required
+                @change=${reportValidityPassword}>
+                    <md-icon-button 
+                    id = "password-toggle"
+                    type = "button"
+                    toggle slot="trailing-icon">
+                      <md-icon>visibility</md-icon>
+                      <md-icon slot="selected">visibility_off</md-icon>
+                    </md-icon-button>
+                </md-filled-text-field>
+
+                <!--
+                <input type="password" id="password" name="password" required>
+                -->
+                <br><br>
+                <md-filled-button 
+                id = "submit-button"
+                type="button"
+                class="buttonsubmit"
+                 
+                >
+                    Regístrate
+                </md-filled-button>
+
+                <md-dialog
+  
+                id = "dialog-confirm"
+                style="max-width: 320px;"
+                ?quick=${quick}
+                ?no-focus-trap=${noFocusTrap}>
+                  <div slot="headline">Esta seguro de esta informacion?</div>
+                  <md-icon slot="icon">delete_outline</md-icon>
+                  <form id="form" slot="content" method="dialog">
+                    Deleting the selected photos will also remove them from all synced
+                    devices.
+                  </form>
+                  <div slot="actions">
+                    <md-text-button 
+                    type="submit"
+                    form="form" 
+                    value="Si">
+                    Si
+                  </md-text-button>
+                    <md-filled-tonal-button 
+                    id = "cancel-button"
+                    type="button"
+                    form="form" 
+                    value="cancel" 
+                    autofocus
+                    >
+                      Cancelar
+                    </md-filled-tonal-button>
+                  </div>
+                </md-dialog>
