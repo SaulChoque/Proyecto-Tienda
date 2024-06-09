@@ -1,14 +1,40 @@
 
 // Textfields
-var email = document.getElementById('email');
-var username = document.getElementById('username');
+var usernamemail = document.getElementById('usernamemail');
 var password = document.getElementById('password');
 
 
-email.addEventListener('change', reportValidityEmail);
-username.addEventListener('change', reportValidityUsername);
-password.addEventListener('change', reportValidityPassword);	
+usernamemail.addEventListener('change', async () => {
+  var errMessage='';
+  const textField = usernamemail.value;
+  var isValid = textField.reportValidity();
 
+  if (textField.includes('@')) {
+    console.log("El campo de texto contiene un @");
+    password.setAttribute('type', 'email');
+  }else if(/^[a-zA-Z0-9]+$/.test(textField)) {
+    password.setAttribute('type', 'text');
+    console.log("El campo de texto contiene solo números y letras");
+  }
+  if(!isValid){
+    console.log('El campo usermail no es válido');
+    return false;
+  }
+  return true;
+});
+password.addEventListener('change', async () => {
+  const textField = password.value;
+  var isValid = textField.reportValidity();
+  if(!isValid){
+    console.log('El campo contraseña no es válido');
+    return false;
+  }
+});	
+
+
+
+
+/* 
 function reportValidityEmail(event) {
   //console.log('reportValidity555');
   const textField = event.target;
@@ -21,6 +47,7 @@ function reportValidityEmail(event) {
       }
       }
       }
+
 function reportValidityUsername(event) {
   //console.log('reportValidity555');
   var errMessage='';
@@ -32,57 +59,29 @@ function reportValidityUsername(event) {
       isValid = false;
       errMessage='El nombre de usuario debe tener al menos 6 caracteres';
       }
-    if (!isValid) {
-      username.setAttribute('error', true);
-      username.setAttribute('error-text', errMessage);
-      console.log('Error: '+errMessage);
-      // Manejar el caso cuando el campo no es válido
-      } else {
-        username.removeAttribute('error-text');
-      username.removeAttribute('error');
-      }
-      }
-}
-function reportValidityPassword(event) {
-  var errMessage='';
-  const regexPassword = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[_\W]).{8,}/;
-  //console.log('reportValidity555');
-  const textField = event.target;
-  if (textField.reportValidity) {
-    var isValid = textField.reportValidity();
-    if (!regexPassword.test(textField.value)) {
-      isValid = false;
-      errMessage='La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula, un número y un símbolo especial';
-      }
       if (!isValid) {
-        password.setAttribute('error', true);
-        password.setAttribute('error-text', errMessage);
+        username.setAttribute('error', true);
+        username.setAttribute('error-text', errMessage);
         console.log('Error: '+errMessage);
         // Manejar el caso cuando el campo no es válido
         } else {
-          password.removeAttribute('error-text');
-      password.removeAttribute('error');
+          username.removeAttribute('error-text');
+        username.removeAttribute('error');
       }
-}
+      }
+      }
+      */
 
-}
 //Dialogs
-var dialogConfirm = document.getElementById('dialog-confirm');
+var dialogLogin = document.getElementById('dialog-login');
 //Buttons
 var toggleButton = document.getElementById('password-toggle');
-var submitButton = document.getElementById('submit-button');
-var cancelButton = document.getElementById('cancel-button');
 
 
 //Events
 
-submitButton.addEventListener('click', async () => {
-  await dialogConfirm.show();
-});
 
-cancelButton.addEventListener('click', async () => {
-  await dialogConfirm.close();
-});
+
 
 
 toggleButton.addEventListener('click', async() => {
@@ -94,3 +93,7 @@ toggleButton.addEventListener('click', async() => {
   }
 });
 
+dialogLogin.addEventListener('cancel', async () => {
+  console.log('closed');
+  window.location.href = "index.html";  
+});

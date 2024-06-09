@@ -37,49 +37,67 @@
         <title>Registro</title>
     </head>
     <body>
-        <div class="container">
-            <h1>Iniciar Sesion</h1>
+      <md-dialog 
+      id="dialog-login"
+      open
+      class="contacts" 
+      ?quick=${quick} 
+      ?no-focus-trap=${noFocusTrap}>
+        <span slot="headline">
+          <span class="headline">Inicia Sesión</span>
+        </span>
+        <form id="form" slot="content" method="dialog" class="contact-content">
+          <md-filled-text-field
+          id="usernamemail"
+          type="text"
+     
+          label="Nombre de usuario"
+          
+          required
+          supporting-text="* Este campo es obligatorio."
+          @change=${reportValidityUsername}>
+          </md-filled-text-field>
+          <md-filled-text-field 
+          id="password" 
+          label="Contraseña" 
+          type="password"
+          required
+          @change=${reportValidityPassword}>
+              <md-icon-button 
+              id = "password-toggle"
+              type = "button"
+              toggle slot="trailing-icon">
+              <md-icon>visibility</md-icon>
+              <md-icon slot="selected">visibility_off</md-icon>
+              </md-icon-button>
+          </md-filled-text-field>
+        </form>
+        <div slot="actions">
+          <md-text-button 
 
-
-
-
-              <md-dialog 
-              open
-              class="contacts" 
-              ?quick=${quick} 
-              ?no-focus-trap=${noFocusTrap}>
-                <span slot="headline">
-                  <md-icon-button form="form" value="close" aria-label="Close dialog">
-                    <md-icon>close</md-icon>
-                  </md-icon-button>
-                  <span class="headline">Create new contact</span>
-                </span>
-                <form id="form" slot="content" method="dialog" class="contact-content">
-                  <div class="contact-row">
-                    <md-filled-text-field
-                      autofocus
-                      label="First Name"></md-filled-text-field>
-                    <md-filled-text-field label="Last Name"></md-filled-text-field>
-                  </div>
-                  <div class="contact-row">
-                    <md-filled-text-field label="Company"></md-filled-text-field>
-                    <md-filled-text-field label="Job Title"></md-filled-text-field>
-                  </div>
-                  <md-filled-text-field label="Email"></md-filled-text-field>
-                  <md-filled-text-field label="Phone"></md-filled-text-field>
-                </form>
-                <div slot="actions">
-                  <md-text-button form="form" value="reset" type="reset"
-                    >Reset</md-text-button
-                  >
-                  <div style="flex: 1"></div>
-                  <md-text-button form="form" value="cancel">Cancel</md-text-button>
-                  <md-text-button form="form" value="save">Save</md-text-button>
-                </div>
-              </md-dialog>
-
-
+          form="form" 
+          value="reset" 
+          type="reset"
+            >Olvide mi contraseña
+          </md-text-button>
+          
+          <md-text-button 
+          form="form" 
+          value="cancel"
+          href="./registro.html">
+            Registrarme
+          </md-text-button>
+          <div style="flex: 1"></div>
+          <md-text-button 
+          form="form" 
+          value="save"
+          href="./index.html">
+            Siguiente
+          </md-text-button>
         </div>
-        <script src="./scripts/inicioSesion/inicioSesion.js"></script>
-    </body>
+      </md-dialog>
+
+   
+      <script src="./scripts/inicioSesion/inicioSesion.js"></script>
+  </body>
 </html>

@@ -1,15 +1,15 @@
 
 // Supongamos que tus datos están en un array de objetos
 var data = [
-    {nombre: 'Peine', profesion: 'Marca1', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Shampoo', profesion: 'Marca2', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Acondicionador', profesion: 'Marca3', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Crema', profesion: 'Marca4', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Gel', profesion: 'Marca5', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Cera', profesion: 'Marca6', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Tinte', profesion: 'Marca7', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Secador', profesion: 'Marca8', imagen: 'images/test/fedep.jpg'},
-    {nombre: 'Plancha', profesion: 'Marca9', imagen: 'images/test/fedep.jpg'},
+    {nombre: 'Peine', profesion: 'Marca1', imagen: 'images/items/comida1.jpg'},
+    {nombre: 'Shampoo', profesion: 'Marca2', imagen: 'images/items/comida2.jpg'},
+    {nombre: 'Acondicionador', profesion: 'Marca3', imagen: 'images/items/comida3.jpg'},
+    {nombre: 'Crema', profesion: 'Marca4', imagen: 'images/items/comida4.jpg'},
+    {nombre: 'Gel', profesion: 'Marca5', imagen: 'images/items/comida5.jpg'},
+    {nombre: 'Cera', profesion: 'Marca6', imagen: 'images/items/comida6.jpg'},
+    {nombre: 'Tinte', profesion: 'Marca7', imagen: 'images/items/comida7.jpg'},
+    {nombre: 'Secador', profesion: 'Marca8', imagen: 'images/items/comida8.jpg'},
+    {nombre: 'Plancha', profesion: 'Marca9', imagen: 'images/items/juguete1.jpg'},
 
 
   // Más objetos aquí...
