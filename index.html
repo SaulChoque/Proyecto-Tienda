@@ -131,11 +131,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
+   
                         <span style="position: relative">
                             <md-filled-button id="usage-anchor"
                             href="./inicioSesion.html"
@@ -177,6 +175,7 @@
                 </div>
             </nav>
             <!-- Container used for the entire body -->
+            <div class="scrim"></div>
             <main class="container">
                 <!-- header contains the first elements of the container -->
                 <div class="header">
@@ -220,16 +219,56 @@
                     <!-- second element of header -->
                     <div class="headerTitleDown">
                         <span class="DownTitle">
-                            Acerca de Nosotros &nbsp;
+                            Nuestros productos &nbsp;
                         </span>
    
 
 
                     </div>
             
-                        <div id="cardContainer" class="row m-5">
-                                  
+                        <div id="cardContainer" class="row m-5">              
                         </div>
+
+                        <md-dialog
+                        id = "dialog-form"
+      
+                        disableClose = true
+                        class="contacts"
+                        ?quick=${quick}
+                        ?no-focus-trap=${noFocusTrap}>
+                            <span slot="headline">
+                                <span class="headline">
+                                    <img src="./images/items/Interactive-Credit-Card-Form-In-jQuery.jpg" alt="">
+
+                                </span>
+                                <span class="headline">Registrate</span>
+                            </span>
+      
+                            
+                        
+                            <div slot="actions">
+                                <md-text-button 
+                                form="form" 
+                                value="reset" 
+                                type="reset">
+                                    Limpiar
+                                </md-text-button>
+                                <div style="flex: 1">
+                                </div>
+                                <md-text-button
+                                id = "cancel-button" 
+                                form="form" 
+                                value="cancel">
+                                    Cancelar
+                                </md-text-button>
+                                <md-text-button 
+                                id = "submit-button"
+                                form="form" 
+                                value="save">
+                                    Confirmar
+                                </md-text-button>
+                            </div>
+                        </md-dialog>
  
                 </div>
             </main>
@@ -244,27 +283,27 @@
 
 <footer class="footerlinks">
     <div class="foot1">
-        AutomatoK <br>
+        TiendaVet <br>
         
     </div>
     <div class="foot1dot1">
-        (This app is not affiliated with TikTok Inc.) <br>
+        (All the brands showed in this site are trademarks of their respective owners) <br>
         (This service/website is still under development)
         
     </div>
 
     <div class="foot2">
-        <a href="PP.html">Privacy Policy</a>
+        <a href="PP.html">Politica de Privacidad</a>
         
     </div>
     
     <div class="foot3">
-        <a href="ToS.html">Terms of Service</a>
+        <a href="ToS.html">Terminos de Servicio</a>
         
     </div>
 
     <div class="foot4">
-        <a>Automatok 2024</a>
+        <a>TiendaVet 2024</a>
         
     </div>
 

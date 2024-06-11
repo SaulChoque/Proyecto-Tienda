@@ -17,6 +17,7 @@ var data = [
 
 // Obtén una referencia al contenedor donde quieres insertar las tarjetas
 var container = document.getElementById('cardContainer');
+var dialogForm = document.getElementById('dialog-form');
 
 // Itera sobre tus datos
 for (var i = 0; i < data.length; i++) {
@@ -67,19 +68,38 @@ cardBody.appendChild(link);
 
 //verificar si el mouse entra en la tarjeta   
 col.addEventListener('mouseover', function() {
+    
     console.log('Mouse over');
     // Obtiene el elemento card específico dentro de este col
     var thisCard = this.querySelector('.card');
     // Crea el botón solo si no existe ya
     if (!thisCard.querySelector('md-filled-button')) {
         // Filled Button Material Web (Boton)
-        var link = document.createElement('md-filled-button');
-        link.href = 'https://www.linkedin.com/in/federico-perez-9b6b7b1b4/';
-        link.target = '_blank';	
-        link.innerHTML = 'Comprar';
-        thisCard.querySelector('.card-body').appendChild(link);
-    }
-});
+        showButtonandDialog(thisCard);
+        }
+        });
+        
+        
+function showButtonandDialog(thisCard){
+    var info = document.createElement('md-filled-button');
+    //link.href = 'https://www.linkedin.com/in/federico-perez-9b6b7b1b4/';
+    info.target = '_blank';	
+    info.innerHTML = 'Comprar';
+    info.id = 'info-button';
+    thisCard.querySelector('.card-body').appendChild(info);
+    var infoButton = document.getElementById('info-button');
+    infoButton.addEventListener('click', async () => {
+        console.log('Comprar');
+        //dialogForm.showModal();
+        //dialogForm.classList.add('open');
+        //dialogForm.classList.remove('close');
+        //dialogForm.show();
+        //dialogForm.open = true;
+        //dialogForm.show();
+        //dialogForm.showModal
+        dialogForm.show();
+    });            
+}
 
 
 //verificar si el mouse sale de la tarjeta
@@ -94,5 +114,7 @@ col.addEventListener('mouseleave', function() {
     }
 });
     // Añade la tarjeta al contenedor
+    col.style.position = "relative";
     container.appendChild(col);
+
 }
